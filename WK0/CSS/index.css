@@ -27,7 +27,7 @@
     color: rgb(241, 19, 33);
     font-family: 'Dosis', sans-serif;
     font-size: 120px;
-    padding: 220px 48px 0px 48px;   
+    padding: 200px 48px 0px 48px;   
     margin: 0;
     clear: both;
 }
@@ -39,4 +39,36 @@
     font-size: 60px;
     padding: 0 48px;   
     margin: 0;
+}
+
+#main{    
+    padding: 48px;
+    box-sizing: border-box;
+}
+
+.clearfix::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+#main article{
+    width: 30%;
+    height: 300px;
+    float: left;
+    border: 1px solid rgb(236, 236, 236);
+    margin-right: 5%;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#main article:nth-child(3)
+{
+    margin-right: 0;
+}
+
+footer{
+    clear: both;
+    height: 200px;
+    width: 100%;
+    background:rgb(0, 3, 36)
 }
