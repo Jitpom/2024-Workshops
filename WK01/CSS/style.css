@@ -17,6 +17,8 @@ h1 {
     background-color: darkblue;
     box-sizing: border-box;
     position: relative;
+    background-image: url("../images/patterns.jpg");
+    background-size: cover;
 }
 
 #hero img{
