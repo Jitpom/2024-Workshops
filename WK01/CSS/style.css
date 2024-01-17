@@ -45,13 +45,14 @@ h1 {
 }
 
 article {
-    border: 1px solid grey;
+    border: 1px solid rgba(128, 128, 128, 0.254);
     height: 500px;
     width: 30%;
     box-sizing: border-box;
     float: left;
     margin-right: 5%;
     padding: 24px;
+    border-radius: 8px;
 }
 
 article:last-of-type {
