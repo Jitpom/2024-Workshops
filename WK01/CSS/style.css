@@ -18,6 +18,24 @@ h1 {
     box-sizing: border-box;
 }
 
+#hero nav{
+    float: right;
+    padding:16px 48px;
+}
+
+#hero nav:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+#hero nav a{
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    font-size: 20px;
+}
+
 #hero h1 {
     padding: 188px 48px 0px 48px;
 }
@@ -87,6 +105,12 @@ article img{
 article h4{
     font-size: 22px;
     font-weight: 600;
+    margin-top: 16px;
+    text-align: center;
+}
+
+article p{
+    color: grey;
     margin-top: 8px;
 }
 
