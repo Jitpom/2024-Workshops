@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WK01 Basic HTML</title>
+    <title>WK02 Embedded Video and Flexbox</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="">
 </head>
 
 <body>
     <section id="hero">
+        <video class="fullscreen" autoplay loop>
+            <source src="videos/runningVideo.mp4" type="video/mp4">
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+            Your browser does not support the video tag.
+        </video>
         <div class="gradient"></div>
         <img src="images/profile.png" alt="">
         <nav>
@@ -20,9 +24,11 @@
             <a href="">Services</a>
             <a href="">Contact</a>
         </nav>
-        <h1>Lenovo</h1>
-        <h4>Smart Technologies for All</h4>
-        <button>Explore</button>
+        <div class="container">
+            <h1>Lenovo</h1>
+            <h4>Smart Technologies for All</h4>
+            <button>Explore</button>
+        </div>
     </section>
     <section class="container clearfix">
         <article>
