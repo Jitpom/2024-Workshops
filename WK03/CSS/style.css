@@ -30,7 +30,7 @@ body {
     padding-right: 32px;
 }
 
-.menu-bar .fa-bars-staggered{
+.menu-bar .fa-bars-staggered {
     color: white;
     cursor: pointer;
 }
@@ -47,7 +47,7 @@ body {
     transition: 0.3s all ease-out;
 }
 
-.menu.active{
+.menu.active {
     transform: translateY(0px);
 }
 
@@ -59,6 +59,7 @@ body {
 .main nav li {
     padding: 16px 16px;
     text-align: right;
+    cursor: pointer;
 }
 
 .main nav a {
@@ -73,7 +74,72 @@ body {
 }
 
 footer {
-    height: 200px;
+    padding: 48px 0;
     width: 100%;
     background-color: brown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+footer article {
+    border: 1px solid grey;
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 640px) {
+    .menu-bar i {
+        display: none;
+    }
+
+    .menu {
+        transform: translateY(0);
+        width: 100%;
+    }
+
+    .main nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px 200px;
+        grid-template-areas: 
+            "item1 item2 item3"
+            "item4 item5 item3";
+        align-items: stretch;
+    }
+
+    footer article {
+        border: 1px solid grey;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer article:nth-child(1){
+        grid-area: item1;
+    }
+    footer article:nth-child(2){
+        grid-area: item2;
+    }
+    footer article:nth-child(3){
+        grid-area: item3;
+        background: white;
+    }
+    footer article:nth-child(4){
+        grid-area: item4;
+    }
+    footer article:nth-child(5){
+        grid-area: item5;
+    }
 }
