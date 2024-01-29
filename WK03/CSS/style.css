@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+body {
+    font-family: "Poppins";
+}
+
+.main {
+    width: 100%;
+    background-color: blanchedalmond;
+    height: 100vh;
+    min-height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.main .menu-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    right: 0;
+    height: 60px;
+    width: 100%;
+    background-color: darkred;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 32px;
+}
+
+.menu-bar .fa-bars-staggered{
+    color: white;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    /* height: 100px; */
+    width: 120px;
+    background-color: rgb(0, 118, 139);
+    z-index: 1;
+    transform: translateY(-200px);
+    transition: 0.3s all ease-out;
+}
+
+.menu.active{
+    transform: translateY(0px);
+}
+
+.main nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.main nav li {
+    padding: 16px 16px;
+    text-align: right;
+}
+
+.main nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.main .box {
+    height: 100px;
+    background-color: darkred;
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    background-color: brown;
+}
