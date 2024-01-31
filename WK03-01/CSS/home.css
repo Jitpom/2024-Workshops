@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
-body{
+body {
     font-family: 'Poppins';
 }
 
-header{
+header {
     width: 100%;
     height: 60px;
     box-sizing: border-box;
@@ -15,14 +15,14 @@ header{
     padding-right: 24px;
 }
 
-.page-title{
+.page-title {
     text-align: center;
     font-size: 2.5em;
     font-weight: bold;
     line-height: 120px;
 }
 
-#item-container{
+#item-container {
     width: 100%;
     padding: 36px 84px;
     display: flex;
@@ -33,7 +33,7 @@ header{
     gap: 16px;
 }
 
-#item-container .item{
+#item-container .item {
     height: 200px;
     background-color: pink;
     width: 100%;
@@ -43,14 +43,14 @@ header{
     align-items: center;
 }
 
-#quote-container{
+#quote-container {
     display: grid;
     grid-template-columns: 2fr 3fr;
     height: 200px;
     background-color: rgb(85, 85, 85);
 }
 
-#quote-container img{
+#quote-container img {
     width: 100%;
     height: inherit;
     object-fit: cover;
@@ -58,7 +58,7 @@ header{
     box-sizing: border-box;
 }
 
-#quote-container .right-quote{
+#quote-container .right-quote {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,26 +68,69 @@ header{
     padding-right: 48px;
 }
 
-#quote-container .right-quote h1{
+#quote-container .right-quote h1 {
     color: white;
     font-weight: bold;
 }
 
-#quote-container .right-quote p{
+#quote-container .right-quote p {
     color: rgb(186, 186, 186);
     font-size: 12px;
     line-height: 150%;
 }
 
-footer{
+footer {
     width: 100%;
     height: 60px;
     background-color: rgb(36, 36, 36);
 }
 
-footer h4{
+footer h4 {
     font-size: 12px;
     color: grey;
     text-align: center;
     line-height: 60px;
+}
+
+@media screen and (min-width: 640px) {
+    header i#bars {
+        display: none;
+    }
+
+    .page-title {
+        text-align: left;
+        padding-left: 84px;
+    }
+
+    #item-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px 200px 200px;        
+        grid-template-areas: 
+            "item1 item2 item4"
+            "item3 item3 item4"
+            "item3 item3 item4";
+        align-items: stretch;
+    }
+
+    #item-container .item {
+        height: auto;
+        width: auto;
+    }
+
+    #item-container .item:nth-child(1){
+        grid-area: item1;
+    }
+
+    #item-container .item:nth-child(2){
+        grid-area: item2;
+    }
+
+    #item-container .item:nth-child(3){
+        grid-area: item3;
+    }
+
+    #item-container .item:nth-child(4){
+        grid-area: item4;
+    }
 }
