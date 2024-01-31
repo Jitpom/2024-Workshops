@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
-body{
+body {
     font-family: 'Poppins';
 }
 
@@ -56,15 +56,40 @@ body{
     grid-area: item7;
 }
 
-#top-grid-container article i{
+#top-grid-container article i {
     color: white;
 }
 
-#top-grid-container article h1{
+#top-grid-container article h1 {
     font-size: 2em;
     font-weight: 600;
     text-shadow: 1px 1px 5px white,
-                -1px -1px 5px white,
-                -1px 1px 5px white,
-                1px -1px 5px white;
+        -1px -1px 5px white,
+        -1px 1px 5px white,
+        1px -1px 5px white;
+}
+
+@media screen and (max-width:640px) {
+    #top-grid-container {
+        grid-template-areas:
+            "item1 item1 item5"
+            "item1 item1 item5"
+            "item7 item6 item5";
+    }
+
+    #top-grid-container article {
+        background-color: yellowgreen;
+    }
+
+    #top-grid-container article:nth-child(2) {
+        display: none;
+    }
+
+    #top-grid-container article:nth-child(3) {
+        display: none;
+    }
+
+    #top-grid-container article:nth-child(4) {
+        display: none;
+    }
 }
