@@ -69,6 +69,7 @@ body {
         1px -1px 5px white;
 }
 
+
 @media screen and (max-width:640px) {
     #top-grid-container {
         grid-template-areas:
@@ -91,5 +92,11 @@ body {
 
     #top-grid-container article:nth-child(4) {
         display: none;
+    }
+}
+
+@media screen and (max-width:480px){
+    #top-grid-container article {
+        background-color:aquamarine;
     }
 }
