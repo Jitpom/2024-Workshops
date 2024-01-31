@@ -1,16 +1,49 @@
-#top-grid-container{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+#top-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 200px 200px 200px;
+    gap: 10px;
+    grid-template-areas:
+        "item1 item2 item7"
+        "item3 item4 item7"
+        "item5 item6 item7";
 }
 
-#top-grid-container article{
+#top-grid-container article {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: grey;
 }
 
-#top-grid-container article:nth-child(3n-1){
+#top-grid-container article:nth-child(3n-1) {
     background-color: brown;
+}
+
+#top-grid-container article:nth-child(1) {
+    grid-area: item1;
+}
+
+#top-grid-container article:nth-child(2) {
+    grid-area: item2;
+}
+
+#top-grid-container article:nth-child(3) {
+    grid-area: item3;
+}
+
+#top-grid-container article:nth-child(4) {
+    grid-area: item4;
+}
+
+#top-grid-container article:nth-child(5) {
+    grid-area: item5;
+}
+
+#top-grid-container article:nth-child(6) {
+    grid-area: item6;
+}
+
+#top-grid-container article:nth-child(7) {
+    grid-area: item7;
 }
