@@ -1,0 +1,16 @@
+#top-grid-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+}
+
+#top-grid-container article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+#top-grid-container article:nth-child(3n-1){
+    background-color: brown;
+}
