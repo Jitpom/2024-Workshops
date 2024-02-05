@@ -1,0 +1,102 @@
+@use 'variables';
+
+
+@mixin highight_text($font-size: 16px, $color: variables.$primary_color){
+    font-size: $font-size;
+    color: $color;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+@mixin body_text($font-size: 14px, $color: variables.$grey_color){
+    font-size: $font-size;
+    color: $color;
+}
+
+%message-shared{
+    width: 80%;
+    padding: 8px;
+    text-align: center;
+    @include highight_text();
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+header{
+    background-color: variables.$primary_color;
+    width: 100%;
+    height: 60px;
+}
+
+#messages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8px;
+    padding: 24px;
+    box-sizing: border-box;
+    width: 100%;
+    .success-message{
+        @extend %message-shared;
+        border: 2px solid green;
+    }
+
+    .warning-message{
+        @extend %message-shared;
+        border: 2px solid yellow;
+    }
+
+    .error-message{
+        @extend %message-shared;
+        border: 2px solid red;
+    }
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    padding: 36px 0;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 36px;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    .card{
+        width: 40%;
+        height: 300px;
+        border: 1px solid variables.$border_color;
+        box-sizing: border-box;
+
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .desc{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100px;
+            padding-left: 16px;
+
+            h1{
+                @include highight_text();
+            }
+
+            p{
+                @include body_text();
+            }
+        }
+    }
+}
+
+
+
+
+
