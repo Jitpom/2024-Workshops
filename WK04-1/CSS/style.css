@@ -1,17 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+body {
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
 #top-header {
   width: 100%;
   height: 30px;
   background-color: rgb(240, 154, 17);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: flex-start;
+  cursor: pointer;
+}
+#top-header:hover nav {
+  transform: translateY(0px);
 }
 #top-header nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translateY(-200px);
+  transition: 300ms all ease-in-out;
 }
 #top-header nav li {
   background-color: rgb(246, 156, 219);
   width: 150px;
   list-style: none;
+  padding: 4px 8px;
 }
 #top-header nav li a {
   color: rgb(85, 85, 85);
@@ -36,4 +53,5 @@
 }
 #main .card h1 {
   color: rgb(246, 156, 219);
+  font-size: 32px;
 }/*# sourceMappingURL=style.css.map */
