@@ -17,7 +17,7 @@
     width: 80%;
     padding: 8px;
     text-align: center;
-    @include highight_text();
+    @include highight_text($color: rgb(66, 66, 66));
 }
 
 body{
