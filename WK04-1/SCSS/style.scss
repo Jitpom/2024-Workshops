@@ -1,6 +1,8 @@
-$primary-color: rgb(11, 16, 147);
-$secondary-color: grey;
-$third-color: black;
+$primary-color: rgb(240, 154, 17);
+$secondary-color: rgb(246, 156, 219);
+$third-color: rgb(85, 85, 85);
+
+$title-text-size: 20px;
 
 #top-header{
     width: 100%;
@@ -19,6 +21,28 @@ $third-color: black;
                 color: $third-color;
                 text-decoration: none;
             }
+        }
+    }
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 60px;
+    padding: 120px 0px;
+
+    .card{
+        width: 100%;
+        height: 300px;
+        border: 1px solid $secondary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            color: $secondary-color
         }
     }
 }
