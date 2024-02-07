@@ -1,72 +1,44 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-
-$primary-color: rgb(240, 154, 17);
-$secondary-color: rgb(246, 156, 219);
-$third-color: rgb(85, 85, 85);
-
-$title-text-size: 32px;
-$body-text-size: 14px;
+$primary-color: rgb(46, 210, 31);
+$secondary-color: rgb(70, 70, 70);
+$third-color: yellow;
 $padding-default: 8px;
 
-body{
-    font-family: 'Poppins';
-    font-size: $body-text-size;
-}
-
-#top-header{
+header {
     width: 100%;
     height: 30px;
     background-color: $primary-color;
     display: flex;
-    justify-content: flex-end;
     flex-direction: row;
-    align-items: flex-start;
-    cursor: pointer;
+    justify-content: flex-end;
+    align-items: flex-start;  
+    cursor: pointer;  
 
     &:hover{
         nav{
-            transform: translateY(0px);
-        }
-    }
-
-    nav{        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        transform: translateY(-200px);
-        transition: 300ms all ease-in-out;
-        li{
-            background-color: $secondary-color;
-            width: 150px;
-            list-style: none;
-            padding: $padding-default/2 $padding-default;
-            a{
-                color: $third-color;
-                text-decoration: none;
+            transform: translateY(30px);
+            li{
+                background-color: rgba($third-color, 1);
             }
         }
     }
-}
 
-#main{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 60px;
-    padding: 120px 0px;
+    nav {
+        transform: translateY(-200px);
+        transition: 0.3s all ease-in;
+        li {
+            list-style: none;
+            background-color: rgba($third-color, 0);
+            padding: $padding-default/2 $padding-default;
+            transition: 1s all linear;
 
-    .card{
-        width: 100%;
-        height: 300px;
-        border: 1px solid $secondary-color;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+            &:hover{
+                background-color:$primary-color;
+            }
 
-        h1{
-            color: $secondary-color;
-            font-size: $title-text-size;
+            a{
+                text-decoration: none;
+                color: $secondary-color;
+            }
         }
     }
 }
