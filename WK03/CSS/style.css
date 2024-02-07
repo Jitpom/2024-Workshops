@@ -60,6 +60,14 @@ body {
     padding: 16px 16px;
     text-align: right;
     cursor: pointer;
+    transform: translateX(0);
+    transition: 0.6s all cubic-bezier(.41,1.48,.23,1.25);
+}
+
+
+.main nav li:hover{
+    background-color: brown;
+    transform: translateY(30px);
 }
 
 .main nav a {
@@ -67,6 +75,76 @@ body {
     text-decoration: none;
 }
 
+
+.animation-container{
+    width: 100%;
+    height: 400px;
+    background: white;
+}
+
+.ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    /* animation-name: moveBall;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both; */
+}
+
+.square{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(212, 32, 179);
+    animation-name: moveSquare;
+    animation-duration: 3s;
+    /* animation-timing-function: ease-out; */
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    /* transform-origin: center; */
+}
+
+@keyframes moveSquare{
+    0%{
+        transform: rotate(0deg) translateX(0px);
+        background-color: yellow;
+    }
+
+    40%{
+        transform: rotate(360deg);
+        background-color: brown;
+    }
+
+    100%{
+        transform: rotate(0deg) translateX(100px);
+        background-color: yellow;
+    }
+}
+
+
+
+
+@keyframes moveBall{
+    0%{
+        transform: translateX(0px);
+    }
+
+    30%{
+        transform: translateX(400px);
+    }
+
+
+    60%{
+        transform: translateY(200px);
+    }
+
+    100%{
+        transform: translateY(0px);
+        transform: translateX(100px);
+    }
+}
 
 .main .box {
     height: 100px;
