@@ -1,0 +1,24 @@
+$primary-color: rgb(11, 16, 147);
+$secondary-color: grey;
+$third-color: black;
+
+#top-header{
+    width: 100%;
+    height: 30px;
+    background-color: $primary-color;
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        li{
+            background-color: $secondary-color;
+            width: 150px;
+            list-style: none;
+            a{
+                color: $third-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
