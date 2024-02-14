@@ -18,6 +18,12 @@
     align-items: center;
 }
 
+%message-shared{
+    color: base.$secondary-color;
+    border: 1px solid base.$secondary-color;
+    padding: base.$padding-default;
+    width: 100%;
+}
 
 header {
     width: 100%;
@@ -62,6 +68,32 @@ header {
     }
 }
 
+#messages{
+    @include flex-container();
+    flex-direction: column;
+    row-gap: base.$padding-default;
+
+    .success{
+        @extend %message-shared;
+        border-color: green;
+    }
+
+    .info{
+        @extend %message-shared;
+        border-color: blue;
+    }
+
+    .error{
+        @extend %message-shared;
+        border-color: red;
+    }
+
+    .warning{
+        @extend %message-shared;
+        border-color: yellow;
+    }
+}
+
 .main{
     @include flex-container();
     .card{
@@ -78,7 +110,7 @@ header {
         overflow: hidden;
         .backdrop{
             width: 100%;
-            background: rgb(70, 202, 225);
+            background: rgb(70, 202, 225)jkjkklj;
             height: 100px;
         }
     }
