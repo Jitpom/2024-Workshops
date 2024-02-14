@@ -4,6 +4,7 @@ $primary-color: rgb(46, 210, 31);
 $secondary-color: rgb(70, 70, 70);
 $third-color: yellow;
 $padding-default: 8px;
+$radius-default: 8px;
 
 body {
     font-family: 'Poppins';
@@ -25,6 +26,7 @@ header {
 
             li {
                 background-color: rgba($third-color, 1);
+                border-radius: $radius-default;
             }
         }
     }

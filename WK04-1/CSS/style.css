@@ -18,6 +18,7 @@ header:hover nav {
 }
 header:hover nav li {
   background-color: yellow;
+  border-radius: 8px;
 }
 header nav {
   transform: translateY(-200px);
