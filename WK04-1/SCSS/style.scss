@@ -1,4 +1,6 @@
 @use 'base';
+@use 'sass:math';
+@use 'sass:color';
 
 @mixin flex-container(){
     display: flex;
@@ -6,6 +8,7 @@
     justify-content: center;
     column-gap: base.$padding-default*4;
     padding: base.$padding-default*5;
+    height: math.round(math.div(800px,1080px) * 100vh);
 }
 
 @mixin card-style($border-kong-color: grey){    
@@ -110,7 +113,7 @@ header {
         overflow: hidden;
         .backdrop{
             width: 100%;
-            background: rgb(70, 202, 225)jkjkklj;
+            background: desaturate(rgb(70, 202, 225), 30%);
             height: 100px;
         }
     }
