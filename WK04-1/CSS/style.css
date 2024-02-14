@@ -112,11 +112,10 @@ header nav li a {
   background: #66b3c1;
   height: 100px;
   transition: 300ms all ease-in-out;
-}
-.news .ball.active {
-  justify-content: flex-end;
+  transform: translateY(0px);
 }
 .news .ball.active .backdrop {
+  transform: translateY(200px);
   background: #28dfff;
 }
 
