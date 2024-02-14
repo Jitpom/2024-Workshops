@@ -6,6 +6,6 @@ $(document).ready(function () {
 
 
     $(".ball").click(function(){
-        $(".info").hide();
+        $(this).toggleClass("active");
     });
 });

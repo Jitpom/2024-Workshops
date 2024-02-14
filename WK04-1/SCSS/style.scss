@@ -111,10 +111,18 @@ header {
         flex-direction: column;
         justify-content: flex-start;
         overflow: hidden;
+        transition: 300ms all ease-in-out;
         .backdrop{
             width: 100%;
             background: desaturate(rgb(70, 202, 225), 30%);
             height: 100px;
+            transition: 300ms all ease-in-out;
+        }
+        &.active{
+            justify-content: flex-end;
+            .backdrop{            
+                background: saturate(rgb(70, 202, 225), 50%);;
+            }
         }
     }
 }

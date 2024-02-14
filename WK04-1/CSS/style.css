@@ -105,11 +105,19 @@ header nav li a {
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
+  transition: 300ms all ease-in-out;
 }
 .news .ball .backdrop {
   width: 100%;
   background: #66b3c1;
   height: 100px;
+  transition: 300ms all ease-in-out;
+}
+.news .ball.active {
+  justify-content: flex-end;
+}
+.news .ball.active .backdrop {
+  background: #28dfff;
 }
 
 @media screen and (min-width: 640px) {
