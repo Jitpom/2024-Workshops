@@ -1,5 +1,12 @@
 @use 'base';
 
+@mixin flex-container(){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: base.$padding-default*4;
+    padding: base.$padding-default*5;
+}
 
 @mixin card-style($border-kong-color: grey){    
     border: 1px solid $border-kong-color;
@@ -56,13 +63,24 @@ header {
 }
 
 .main{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    column-gap: base.$padding-default*4;
-    padding: base.$padding-default*5;
+    @include flex-container();
     .card{
         @include card-style($border-kong-color: red);
+    }
+}
+
+.news{
+    @include flex-container();
+    .ball{
+        @include card-style($border-kong-color: rgb(70, 202, 225));
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: hidden;
+        .backdrop{
+            width: 100%;
+            background: rgb(70, 202, 225);
+            height: 100px;
+        }
     }
 }
 
