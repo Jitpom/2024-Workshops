@@ -27,7 +27,7 @@ $(document).ready(function () {
         //Scrolling down
         if (currentScrollTop > lastScrollTop) {
             if ($('#top-nav').hasClass('active')) {
-                $("#top-nav").removeClass("active");
+                // $("#top-nav").removeClass("active");   
             }
         }
         //Scrolling up
