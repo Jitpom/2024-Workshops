@@ -281,6 +281,13 @@ header {
         line-height: 150%;
     }
 
+    .box{
+        width: 200px;
+        height: 200px;
+        transition: all 0.5s ease-in;
+        background-color: rgb(222, 184, 135);
+    }
+
     @media only screen and (min-width: 768px) {
         padding: 150px 100px;
     }

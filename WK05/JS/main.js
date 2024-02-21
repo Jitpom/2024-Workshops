@@ -8,7 +8,8 @@ $(document).ready(function () {
         translatePos = translatePos * 0.8;
         var scalingFactor = 1 - currentScrollTop * .002;
         var translateRectY = 70 - currentScrollTop * 0.1;
-
+        var borderRadiusFactor = currentScrollTop * 0.05;
+        var colorFactor = currentScrollTop * 0.7;
 
         $('#circle-a').css("transform", "translate(" + translatePos + "px, 0px) rotate(" + rotateDeg + "deg) scale(" + scalingFactor + ")");
 
@@ -17,6 +18,10 @@ $(document).ready(function () {
         $('#red').css("transform", "translate(100px, " + (-translateRectY) + "vh)");
 
         $('#blue').css("transform", "translate(-100px, " + translateRectY + "vh)");
+
+        $('.box').css("border-radius", borderRadiusFactor + "%");
+        $('.box').css("transform", "rotate(" + rotateDeg + "deg)");
+        
 
 
         //Scrolling down
